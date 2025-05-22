@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Allen Zagorodnyuk — Projects</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- For code highlighting -->
+  <link 
+    rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css"
+  >
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="experiences.html">Experiences</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h2>Coding Projects</h2>
+
+    <!-- Example: GitHub Gist embed -->
+    <section>
+      <h3>Market-Making Bot (Python)</h3>
+      <script src="https://gist.github.com/your-username/abcdef1234567890.js"></script>
+    </section>
+
+    <!-- Inline code snippet -->
+    <section>
+      <h3>Portfolio Optimizer</h3>
+      <pre><code class="language-python">
+def optimize_portfolio(returns, cov_matrix, risk_aversion):
+    # sample code …
+    inv_cov = np.linalg.inv(cov_matrix)
+    return inv_cov.dot(returns) / risk_aversion
+      </code></pre>
+    </section>
+  </main>
+</body>
+</html>
