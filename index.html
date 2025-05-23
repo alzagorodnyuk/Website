@@ -6,7 +6,15 @@
   <title>Allen Zagorodnyuk - Website</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif; color: rgb(29,29,31); line-height: 25px; }
+    body {
+      font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      color: rgb(29,29,31);
+      line-height: 25px;
+      font-size: 14px;
+      font-weight: 400;
+      letter-spacing: -0.374px;
+      text-transform: none;
+    }
 
     /* Header styling */
     header {
@@ -18,32 +26,28 @@
       z-index: 100;
       display: flex;
       align-items: center;
-      justify-content: space-around;
-      font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
-      font-size: 14px;
-      font-weight: 400;
-      line-height: 20px;
-      letter-spacing: -0.374px;
+      justify-content: center;
+      font-family: inherit;
+      font-size: inherit;
+      font-weight: inherit;
+      line-height: inherit;
+      letter-spacing: inherit;
       text-transform: none;
-      color: rgb(29,29,31);
-    }
-    header .logo {
-      font-size: 14px;
-      cursor: pointer;
+      color: inherit;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
     header nav {
-      flex: 1;
       display: flex;
-      justify-content: space-evenly;
+      gap: 80px;
     }
     header nav a {
       color: rgb(29,29,31);
       text-decoration: none;
       font-family: inherit;
       font-size: inherit;
-      font-weight: 400;
+      font-weight: inherit;
       line-height: inherit;
-      letter-spacing: -0.374px;
+      letter-spacing: inherit;
       text-transform: none;
     }
     header nav a:hover {
@@ -52,7 +56,7 @@
 
     /* Section and other styling */
     section { padding: 70px 10px 40px; scroll-margin-top: 80px; }
-    #hero { 
+    #hero {
       background: url('beautiful-view-empire-states-skyscrapers-new-york-city.jpg') no-repeat center/cover;
       position: relative;
       display: flex;
@@ -82,7 +86,7 @@
       color: rgb(29,29,31);
       text-align: center;
       padding: 5px 20px;
-      font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-family: inherit;
       font-size: 12px;
       font-weight: 400;
       line-height: 18px;
@@ -94,11 +98,10 @@
 </head>
 <body>
   <header>
-    <div class="logo">&#x2630;</div>
     <nav>
       <a href="index.html">About Me</a>
-      <a href="project.html">Projects</a>
-      <a href="experience.html">Experience</a>
+      <a href="project.html">Projects & Research</a>
+      <a href="experience.html">Professional Experience</a>
       <a href="https://www.linkedin.com/in/allen-zagorodnyuk-454505253/" target="_blank">LinkedIn</a>
       <a href="resume.pdf" target="_blank">Resume</a>
     </nav>
@@ -114,15 +117,10 @@
   <section id="about">
     <div class="container">
       <h2>About Me</h2>
-      <p>I’m Allen Zagorodnyuk, a recent New York University graduate with a BA in Mathematics and minors in Economic Theory and Computer Science. I am driven by curiosity and a love of learning. 
-        
-        I am passionate about trading and enjoy diving into data to spot patterns, run simulations, and build trading strategies. I like working on projects that push me to think creatively and solve real world financial problems.
-
-Right now, I’m eager to break into the quantitative finance field. To keep growing, I plan to pursue a Master’s in Mathematical Finance, where I can deepen my understanding of the theory and technicals that drive the investment world.</p>
-      
-      <p>Outside my professional and academic career, I enjoy following sports, reading, and listening to podcasts. I am also very passionate about Chess, as I grew up having competed in tournaments across New York. I use chess as a way to clear my head, but also challenge myself against tough opponents. </p>
-      
-      <!-- Exams & Certifications, Coursework, Interests, and Books in 2x2 grid -->
+      <p>I’m Allen Zagorodnyuk, a recent New York University graduate with a BA in Mathematics and minors in Economic Theory and Computer Science. I am driven by curiosity and a love of learning.
+      I am passionate about trading and enjoy diving into data to spot patterns, run simulations, and build trading strategies. I like working on projects that push me to think creatively and solve real world financial problems.
+      Right now, I’m eager to break into the quantitative finance field. To keep growing, I plan to pursue a Master’s in Mathematical Finance, where I can deepen my understanding of the theory and technicals that drive the investment world.</p>
+      <p>Outside my professional and academic career, I enjoy following sports, reading, and listening to podcasts. I am also very passionate about Chess, as I grew up having competed in tournaments across New York. I use chess as a way to clear my head, but also challenge myself against tough opponents.</p>
       <div class="lists">
         <div>
           <h3>Exams & Certifications</h3>
@@ -158,7 +156,8 @@ Right now, I’m eager to break into the quantitative finance field. To keep gro
           </ul>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
   <footer id="footer">
     <p>&copy; Allen Zagorodnyuk | New York, NY</p>
