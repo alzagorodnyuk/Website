@@ -70,23 +70,40 @@
     #hero .content { position: relative; z-index: 1; }
     #hero .content h1 { font-size: 4rem; font-family: 'Impact', 'Arial Black', sans-serif; text-transform: uppercase; letter-spacing: 2px; margin: 0; }
 
-    #about { background: #fff; padding-bottom: 40px; }
-
-    /* Layout lists in 2x2 grid */
-    #about .lists {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
-      margin-top: 20px;
+    /* Content grid */
+    .container {
+      max-width: 1200px;
+      margin: auto;
     }
-
+    .projects-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      margin-top: 40px;
+    }
+    .project {
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+    .project h3 {
+      font-family: inherit;
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+    .project p {
+      font-family: inherit;
+      font-size: 1rem;
+      line-height: 1.5;
+    }
     /* Footer styling */
-    #footer {
+    footer {
       background: #ffffff;
       color: rgb(29,29,31);
       text-align: center;
-      padding: 5px 20px;
-      font-family: inherit;
+      padding: 10px 20px;
+      font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
       font-size: 12px;
       font-weight: 400;
       line-height: 18px;
@@ -107,40 +124,34 @@
     </nav>
   </header>
 
-  <!-- Hero Section -->
   <section id="hero">
     <div class="overlay"></div>
     <div class="content">
-      <h1>Projects & Research</h1>
+      <h1>Professional Experience</h1>
     </div>
   </section>
 
-  <!-- Projects Section -->
-  <section id="projects">
+  <section id="experiences">
     <div class="container">
       <div class="projects-grid">
         <div class="project">
           <h3>Index Rebalancing Algo Trading</h3>
-          <p>
-            Index Rebalancing Announcements are scheduled to occur every three months, so why not take opportunity of this event? Gathering historical Stocks and ETF data, I used Python and Excel to backtested algorithmic trading strategies through a modeled portfolio with $5 million in capital. I tested different buy and sell triggers and convertated my results into an clear and professional Investment Summary.</p>
+          <p>Index rebalancing announcements occur quarterly. I backtested algorithmic trading strategies in Python and Excel on a modeled $5M portfolio, testing various buy/sell triggers and summarizing results in a professional investment report.</p>
         </div>
         <div class="project">
           <h3>Sustainable Energy Start-Up Investment</h3>
-          <p>
-            Working as an VC Research Extern for Energy Innovation Capital, I was responsible for researching the Hydrogen Energy Market. After researching the CAGR, landscape, and emerging companies in the industry, I was assigned a start-up company. Upon analyzing their pitch desk, I utilized my research to create an investment decisions by weighting pros and cons of investing into said start-up .</p>
+          <p>As a VC Research Extern at Energy Innovation Capital, I analyzed the hydrogen energy market’s CAGR and landscape. I evaluated a target start-up’s pitch deck, weighing pros and cons to inform investment decisions.</p>
         </div>
         <div class="project">
           <h3>Index Fund Portfolio Optimization</h3>
-          <p>
-            Modeling a $5 million portfolio, I created a multi asset investment strategy to compete against investing in AAPL over the same timeframe. Using excel, I gathered historical and caluclated data such as variance, correlation, and covariance. This data allowed me to model an investment strategy that maximized my Sharpe Ratio. I organized my finding to a clear and thorough presentation..</p>
+          <p>Modeled a $5M multi-asset strategy to outperform AAPL using Excel—calculating variance, correlation, and covariance to maximize Sharpe Ratio. Findings were delivered in a clear, thorough presentation.</p>
         </div>
       </div>
     </div>
   </section>
 
-    <!-- Footer -->
-  <footer id="footer">
-    <p>&copy; 2025 Allen Zagorodnyuk</p>
+  <footer>
+    <p>&copy; Allen Zagorodnyuk | New York, NY</p>
   </footer>
 </body>
 </html>
