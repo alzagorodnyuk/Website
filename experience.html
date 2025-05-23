@@ -15,43 +15,18 @@
       letter-spacing: -0.374px;
       text-transform: none;
     }
-
-    /* Header styling */
+    }
     header {
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%;
-      background: #ffffff;
-      padding: 5px 20px;
-      z-index: 100;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: inherit;
-      font-size: inherit;
-      font-weight: inherit;
-      line-height: inherit;
-      letter-spacing: inherit;
-      text-transform: none;
-      color: inherit;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      position: fixed; top:0; left:0; width:100%; background:#fff;
+      padding:15px 40px; display:flex; align-items:center; justify-content:center;
+      box-shadow:0 2px 5px rgba(0,0,0,0.1); z-index:100;
     }
-    header nav {
-      display: flex;
-      gap: 80px;
-    }
-    header nav a {
-      color: rgb(29,29,31);
-      text-decoration: none;
-      font-family: inherit;
-      font-size: inherit;
-      font-weight: inherit;
-      line-height: inherit;
-      letter-spacing: inherit;
-      text-transform: none;
-    }
-    header nav a:hover {
-      text-decoration: underline;
+    header .logo { position:absolute; left:40px; font-size:16px; }
+    header nav { display:flex; gap:100px; }
+    header nav a { color:inherit; text-decoration:none; white-space:nowrap; font-size:16px; }
+    header nav a:hover { text-decoration:underline; }
+    .login-btn { position:absolute; right:40px; padding:6px 20px; font-size:16px;
+      border:1px solid rgb(29,29,31); border-radius:20px; text-decoration:none; color:inherit;
     }
 
     /* Section and other styling */
