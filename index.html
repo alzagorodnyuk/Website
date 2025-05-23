@@ -6,14 +6,54 @@
   <title>Allen Zagorodnyuk - Website</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: Ariel, sans-serif; line-height: 1.6; color: #333; }
-    header { position: fixed; top: 0; left: 0; width: 100%; background: #C6BFC7; padding: 10px 20px; z-index: 100; }
-    header nav { display: flex; justify-content: center; gap: 20px; }
-    header nav a { color: #f4f4f4; text-decoration: none; font-weight: bold; text-transform: uppercase; font-size: 0.9rem; }
-    section { padding: 40px 10px; /* reduced side gutters for more space */ scroll-margin-top: 60px; }
-    /* Hero Section */
-    #hero {
-      background: url('beautiful-view-empire-states-skyscrapers-new-york-city.jpg') no-repeat center center/cover;
+    body { font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif; color: rgb(29,29,31); line-height: 25px; }
+
+    /* Header styling */
+    header {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      background: #ffffff;
+      padding: 5px 20px;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 20px;
+      letter-spacing: -0.374px;
+      text-transform: none;
+      color: rgb(29,29,31);
+    }
+    header .logo {
+      font-size: 14px;
+      cursor: pointer;
+    }
+    header nav {
+      flex: 1;
+      display: flex;
+      justify-content: space-evenly;
+    }
+    header nav a {
+      color: rgb(29,29,31);
+      text-decoration: none;
+      font-family: inherit;
+      font-size: inherit;
+      font-weight: 400;
+      line-height: inherit;
+      letter-spacing: -0.374px;
+      text-transform: none;
+    }
+    header nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* Section and other styling */
+    section { padding: 70px 10px 40px; scroll-margin-top: 80px; }
+    #hero { 
+      background: url('beautiful-view-empire-states-skyscrapers-new-york-city.jpg') no-repeat center/cover;
       position: relative;
       display: flex;
       align-items: center;
@@ -24,48 +64,39 @@
     }
     #hero .overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); }
     #hero .content { position: relative; z-index: 1; }
-    #hero .content h1 { font-size: 4rem; font-family: 'Impact', 'Ariel Black', sans-serif; text-transform: uppercase; letter-spacing: 2px; margin: 0; }
+    #hero .content h1 { font-size: 4rem; font-family: 'Impact', 'Arial Black', sans-serif; text-transform: uppercase; letter-spacing: 2px; margin: 0; }
 
-    /* Section Backgrounds */
-    #about { background: #fff; }
-    #footer { background: #C6BFC7; color: #f4f4f4; text-align: center; padding: 20px; }
+    #about { background: #fff; padding-bottom: 40px; }
 
-    /* Containers */
-    .container { max-width: 1200px; /* increased content width */ margin: auto; }
+    /* Layout lists in 2x2 grid */
+    #about .lists {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      margin-top: 20px;
+    }
 
-    /* About Me Subsection Lists */
-  
-    #about .lists { display: flex; gap: 20px; flex-wrap: wrap; margin-top: 20px; }
-    #about .lists > div { flex: 1; min-width: 200px; }
-    #about ul { list-style: disc inside; }
-
-    /* Projects Section */
-    #interests { background: #C6BFC7; }#projects .projects-grid { display: flex; gap: 100px; flex-wrap: wrap; justify-content: center; }
-    #projects .project { flex: 1; min-width: 280px; max-width: 450px; background: #fff; border-radius: 8px; padding: 10px; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-    #projects .project img { width: 100%; height: auto; border-radius: 4px; margin-bottom: 15px; }
-    #projects .project h3 { margin-bottom: 0.5rem;   /* pushes the description down */}
-
-    /* Interests Section */
-    #interests { background: #fff; }
-    #interests .summary { margin-bottom: 10px; }
-    #interests .lists { display: flex; gap: 20px; flex-wrap: wrap; }
-    #interests .lists > div { flex: 1; min-width: 200px; }
-    #interests ul { list-style: disc inside; }
-
-    #about h2,
-    #projects h2,
-    #interests h2 {margin-bottom: 0.75rem;}
-
-    /* Footer Links */
-    footer a { color: #fff; text-decoration: none; margin: 0 10px; }
+    /* Footer styling */
+    #footer {
+      background: #ffffff;
+      color: rgb(29,29,31);
+      text-align: center;
+      padding: 5px 20px;
+      font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 18px;
+      letter-spacing: -0.374px;
+      text-transform: none;
+      border-top: 1px solid #ccc;
+    }
   </style>
 </head>
 <body>
-  <!-- Header -->
   <header>
+    <div class="logo">&#x2630;</div>
     <nav>
-      <a href="#hero">Home</a>
-      <a href="#about">About Me</a>
+      <a href="index.html">About Me</a>
       <a href="project.html">Projects</a>
       <a href="experience.html">Experience</a>
       <a href="https://www.linkedin.com/in/allen-zagorodnyuk-454505253/" target="_blank">LinkedIn</a>
@@ -73,7 +104,6 @@
     </nav>
   </header>
 
-  <!-- Hero Section -->
   <section id="hero">
     <div class="overlay"></div>
     <div class="content">
@@ -81,7 +111,6 @@
     </div>
   </section>
 
-  <!-- About Me Section -->
   <section id="about">
     <div class="container">
       <h2>About Me</h2>
@@ -93,7 +122,7 @@ Right now, I’m eager to break into the quantitative finance field. To keep gro
       
       <p>Outside my professional and academic career, I enjoy following sports, reading, and listening to podcasts. I am also very passionate about Chess, as I grew up having competed in tournaments across New York. I use chess as a way to clear my head, but also challenge myself against tough opponents. </p>
       
-      <!-- Exams & Certifications and Relevant Coursework Side by Side -->
+      <!-- Exams & Certifications, Coursework, Interests, and Books in 2x2 grid -->
       <div class="lists">
         <div>
           <h3>Exams & Certifications</h3>
@@ -106,14 +135,16 @@ Right now, I’m eager to break into the quantitative finance field. To keep gro
           <ul>
             <li>Mathematical Finance</li>
             <li>Linear Algebra & Numerical Analysis</li>
-            <li>Theory of Probability & Statistics/Foracsting Models</li>
-            <li>Game Theory, Advanced Micro Theory, & Microeconomics Analysis</li>
+            <li>Theory of Probability & Statistics/Forecasting Models</li>
+            <li>Game Theory, Advanced Micro Theory, & Microeconomic Analysis</li>
           </ul>
+        </div>
+        <div>
           <h3>Interests</h3>
           <ul>
             <li>Chess: Elo 1400</li>
             <li>Hockey: New York Rangers</li>
-            <li>Formula 1: Mercedes AMG Petronas </li>
+            <li>Formula 1: Mercedes AMG Petronas</li>
           </ul>
         </div>
         <div>
@@ -125,13 +156,12 @@ Right now, I’m eager to break into the quantitative finance field. To keep gro
             <li>Principles: Ray Dalio (2025)</li>
             <li>The Man Who Solved the Market (2024)</li>
           </ul>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-    <!-- Footer -->
   <footer id="footer">
-    <p>&copy; 2025 Allen Zagorodnyuk</p>
+    <p>&copy; Allen Zagorodnyuk | New York, NY</p>
   </footer>
 </body>
 </html>
