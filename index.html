@@ -8,117 +8,43 @@
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      background-color: rgb(245, 245, 247);
       color: rgb(29,29,31);
       font-size: 16px;
-      font-weight: 400;
       line-height: 24px;
-      letter-spacing: -0.374px;
     }
-    /* Header styling */
     header {
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%;
-      background: #ffffff;
-      padding: 15px 40px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      z-index: 100;
+      position: fixed; top:0; left:0; width:100%; background:#fff;
+      padding:15px 40px; display:flex; align-items:center; justify-content:center;
+      box-shadow:0 2px 5px rgba(0,0,0,0.1); z-index:100;
     }
-    /* Logo positioned on left */
-    header .logo {
-      position: absolute;
-      left: 40px;
-      font-size: 16px;
-      cursor: pointer;
+    header .logo { position:absolute; left:40px; font-size:16px; }
+    header nav { display:flex; gap:100px; }
+    header nav a { color:inherit; text-decoration:none; white-space:nowrap; font-size:16px; }
+    header nav a:hover { text-decoration:underline; }
+    .login-btn { position:absolute; right:40px; padding:6px 20px; font-size:16px;
+      border:1px solid rgb(29,29,31); border-radius:20px; text-decoration:none; color:inherit;
     }
-    /* Login button positioned right */
-    .login-btn {
-      position: absolute;
-      right: 40px;
-      font-size: 16px;
-      padding: 6px 20px;
-      border: 1px solid rgb(29,29,31);
-      border-radius: 20px;
-      text-decoration: none;
-      color: rgb(29,29,31);
-    }
-    header nav {
-      display: flex;
-      gap: 100px;
-    }
-    header nav a {
-      color: rgb(29,29,31);
-      text-decoration: none;
-      white-space: nowrap;
-      font-size: 16px;
-    }
-    header nav a:hover {
-      text-decoration: underline;
-    }
-    /* Section styling */
-    section { padding: 100px 20px 40px; scroll-margin-top: 120px; }
-    #hero {
-      background: url('beautiful-view-empire-states-skyscrapers-new-york-city.jpg') no-repeat center/cover;
-      display: flex; align-items: center; justify-content: center;
-      text-align: center;
-      min-height: 60vh; /* 75% of original 80vh */
-    }
-    #hero .overlay { display: none; }
-    #hero .content h1 {
-      font-size: 4rem;
-      font-family: 'Impact','Arial Black',sans-serif;
-      letter-spacing: 2px;
-      color: #ffffff;
-    }
-    /* About grid */
-    #about .lists {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 40px;
-      margin: 20px auto;
-      max-width: 1000px;
-      justify-items: center;
-    }
-    #about h2 {
-      font-size: 2.5rem;
-      margin-bottom: 20px;
-      text-align: center;
-    }
-    #about p {
-      font-size: 1.125rem;
-      line-height: 1.6;
-      max-width: 800px;
-      margin: 0 auto 20px;
-      text-align: center;
-    }
-    #about .lists div {
-      text-align: left; /* align bullets to left */
-    }
-    #about .lists h3 {
-      font-size: 1.25rem;
-      margin-bottom: 10px;
-      text-align: center;
-    }
-    #about .lists ul {
-      list-style: disc inside;
-      font-size: 1.125rem;
-      line-height: 1.6;
-    }
-    /* Footer styling */
-    #footer {
-      position: fixed;
-      bottom: 0; left: 0;
-      width: 100%;
-      background: #ffffff;
-      text-align: center;
-      padding: 15px 40px;
-      font-size: 14px;
-      border-top: 1px solid #ccc;
-      box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
-      z-index: 100;
+    section { padding:100px 20px 40px; scroll-margin-top:120px; display:flex; justify-content:center; }
+    /* Hero */
+    #hero { position:relative; width:100%; min-height:60vh; background: url('beautiful-view-empire-states-skyscrapers-new-york-city.jpg') no-repeat center/cover; display:flex; align-items:center; justify-content:center; }
+    #hero .overlay { position:absolute; inset:0; background:rgba(0,0,0,0.5); }
+    #hero .content { position:relative; z-index:1; }
+    #hero h1 { color:#fff; font-size:4rem; font-family:'Impact','Arial Black',sans-serif; letter-spacing:2px; }
+    /* Card wrapper */
+    .card { background:#fff; border-radius:8px; box-shadow:0 2px 5px rgba(0,0,0,0.05); padding:30px; margin-bottom:40px; width:100%; max-width:1000px; }
+    /* About Me Card */
+    #about-card h2 { font-size:2.5rem; margin-bottom:20px; text-align:center; }
+    #about-card p { font-size:1.125rem; line-height:1.6; margin-bottom:20px; text-align:center; }
+    /* Lists Cards */
+    #about-lists { display:grid; grid-template-columns:repeat(4,1fr); gap:20px; }
+    @media(min-width:600px) { #about-lists { grid-template-columns:1fr 1fr; } }
+    #about-lists .list-card { text-align:left; }
+    #about-lists h3 { font-size:1.25rem; margin-bottom:10px; }
+    #about-lists ul { list-style:disc inside; font-size:1.125rem; line-height:1.6; }
+    /* Footer */
+    #footer { position:fixed; bottom:0; left:0; width:100%; background:#fff; text-align:center;
+      padding:15px 40px; font-size:14px; border-top:1px solid #ccc; box-shadow:0 -2px 5px rgba(0,0,0,0.1);
     }
   </style>
 </head>
@@ -129,7 +55,7 @@
       <a href="index.html">About Me</a>
       <a href="project.html">Projects & Research</a>
       <a href="experience.html">Professional Experience</a>
-      <a href="resume.pdf" target="_blank">Resume</a>
+      <a href="resume.pdf">Resume</a>
     </nav>
     <a class="login-btn" href="https://www.linkedin.com/in/allen-zagorodnyuk-454505253/" target="_blank">LinkedIn</a>
   </header>
@@ -142,56 +68,33 @@
     </div>
   </section>
 
-  <!-- About Me Section -->
-  <section id="about">
-    <h2>About Me</h2>
-    <p>I’m Allen Zagorodnyuk, a recent New York University graduate with a BA in Mathematics and minors in Economic Theory and Computer Science...</p>
-    <p>Outside my professional and academic career, I enjoy following sports, reading, and listening to podcasts...</p>
+  <!-- About Me Card -->
+  <section>
+    <div id="about-card" class="card">
+      <h2>About Me</h2>
+      <p>I’m Allen Zagorodnyuk, a recent New York University graduate with a BA in Mathematics and minors in Economic Theory and Computer Science. I am driven by curiosity and a love of learning.</p>
+      <p>Outside my professional and academic career, I enjoy following sports, reading, and listening to podcasts. I am also passionate about chess and compete in tournaments across New York.</p>
+    </div>
+  </section>
 
-    <!-- extra line break before lists -->
-    <br />
-    <div class="lists">
-      <div>
+  <!-- Lists Cards -->
+  <section>
+    <div id="about-lists" class="card">
+      <div class="list-card">
         <h3>Exams & Certifications</h3>
-        <ul>
-          <li>FINRA: Securities Industry Essentials (SIE)</li>
-        </ul>
+        <ul><li>FINRA: Securities Industry Essentials (SIE)</li></ul>
       </div>
-      <div>
+      <div class="list-card">
         <h3>Relevant Coursework</h3>
-        <ul>
-          <li>Mathematical Finance</li>
-          <li>Linear Algebra & Numerical Analysis</li>
-          <li>Theory of Probability & Statistics/Forecasting Models</li>
-          <li>Game Theory, Advanced Micro Theory, & Microeconomic Analysis</li>
-        </ul>
+        <ul><li>Mathematical Finance</li><li>Linear Algebra & Numerical Analysis</li><li>Probability & Statistics/Forecasting Models</li><li>Micro & Game Theory</li></ul>
       </div>
-      <div>
-        <h3>Relevant Coursework</h3>
-        <ul>
-          <li>Mathematical Finance</li>
-          <li>Linear Algebra & Numerical Analysis</li>
-          <li>Theory of Probability & Statistics/Forecasting Models</li>
-          <li>Game Theory, Advanced Micro Theory, & Microeconomic Analysis</li>
-        </ul>
-      </div>
-      <div>
+      <div class="list-card">
         <h3>Interests</h3>
-        <ul>
-          <li>Chess: Elo 1400</li>
-          <li>Hockey: New York Rangers</li>
-          <li>Formula 1: Mercedes AMG Petronas</li>
-        </ul>
+        <ul><li>Chess: Elo 1400</li><li>Hockey: NY Rangers</li><li>Formula 1: Mercedes AMG Petronas</li></ul>
       </div>
-      <div>
+      <div class="list-card">
         <h3>Books Read/Currently Reading</h3>
-        <ul>
-          <li>The Intelligent Investor</li>
-          <li>How I Became a Quant: Insights From 25 Wall Street's Elite (2025)</li>
-          <li>Meditations: Marcus Aurelius (2025)</li>
-          <li>Principles: Ray Dalio (2025)</li>
-          <li>The Man Who Solved the Market (2024)</li>
-        </ul>
+        <ul><li>The Intelligent Investor</li><li>How I Became a Quant</li><li>Meditations</li><li>Principles</li><li>The Man Who Solved the Market</li></ul>
       </div>
     </div>
   </section>
