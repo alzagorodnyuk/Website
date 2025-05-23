@@ -3,77 +3,88 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Allen Zagorodnyuk - Website</title>
+  <title>Allen Zagorodnyuk - Professional Experience</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      background-color: rgb(245, 245, 247);
       color: rgb(29,29,31);
-      line-height: 25px;
-      font-size: 14px;
-      font-weight: 400;
-      letter-spacing: -0.374px;
-      text-transform: none;
+      font-size: 16px;
+      line-height: 24px;
     }
-
-    /* Header styling */
     header {
       position: fixed;
       top: 0; left: 0;
       width: 100%;
       background: #ffffff;
-      padding: 5px 20px;
-      z-index: 100;
+      padding: 15px 40px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-family: inherit;
-      font-size: inherit;
-      font-weight: inherit;
-      line-height: inherit;
-      letter-spacing: inherit;
-      text-transform: none;
-      color: inherit;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      z-index: 100;
+    }
+    header .logo {
+      position: absolute;
+      left: 40px;
+      font-size: 16px;
+      cursor: pointer;
     }
     header nav {
       display: flex;
-      gap: 80px;
+      gap: 100px;
     }
     header nav a {
-      color: rgb(29,29,31);
+      color: inherit;
       text-decoration: none;
-      font-family: inherit;
-      font-size: inherit;
-      font-weight: inherit;
-      line-height: inherit;
-      letter-spacing: inherit;
-      text-transform: none;
+      white-space: nowrap;
+      font-size: 16px;
     }
     header nav a:hover {
       text-decoration: underline;
     }
-
-    /* Section and other styling */
-    section { padding: 70px 10px 40px; scroll-margin-top: 80px; }
+    .login-btn {
+      position: absolute;
+      right: 40px;
+      padding: 6px 20px;
+      font-size: 16px;
+      border: 1px solid rgb(29,29,31);
+      border-radius: 20px;
+      text-decoration: none;
+      color: inherit;
+    }
+    section { padding: 100px 20px 40px; scroll-margin-top: 120px; }
+    /* Hero Section */
     #hero {
-      background: url('aditya-vyas-mHdATQY9fIU-unsplash.jpg') no-repeat center/cover;
       position: relative;
+      width: 100%;
+      min-height: 60vh;
+      background: url('aditya-vyas-mHdATQY9fIU-unsplash.jpg') no-repeat center/cover;
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #f4f4f4;
       text-align: center;
-      min-height: 80vh;
     }
-    #hero .overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); }
-    #hero .content { position: relative; z-index: 1; }
-    #hero .content h1 { font-size: 4rem; font-family: 'Impact', 'Arial Black', sans-serif; text-transform: uppercase; letter-spacing: 2px; margin: 0; }
-    /* Content grid */
-    .container {
-      max-width: 1200px;
-      margin: auto;
+    #hero .overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.5);
+      z-index: 1;
     }
+    #hero .content {
+      position: relative;
+      z-index: 2;
+    }
+    #hero .content h1 {
+      font-size: 4rem;
+      font-family: 'Impact', 'Arial Black', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #f4f4f4;
+    }
+    /* Experiences Grid */
+    .container { max-width: 1200px; margin: auto; }
     .projects-grid {
       display: flex;
       flex-direction: column;
@@ -87,40 +98,38 @@
       box-shadow: 0 2px 5px rgba(0,0,0,0.05);
     }
     .project h3 {
-      font-family: inherit;
       font-size: 1.2rem;
       margin-bottom: 10px;
     }
     .project p {
-      font-family: inherit;
       font-size: 1rem;
       line-height: 1.5;
     }
-    /* Footer styling */
-    footer {
+    /* Footer */
+    #footer {
+      position: fixed;
+      bottom: 0; left: 0;
+      width: 100%;
       background: #ffffff;
-      color: rgb(29,29,31);
       text-align: center;
-      padding: 10px 20px;
-      font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
-      font-size: 12px;
-      font-weight: 400;
-      line-height: 18px;
-      letter-spacing: -0.374px;
-      text-transform: none;
+      padding: 15px 40px;
+      font-size: 14px;
       border-top: 1px solid #ccc;
+      box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+      z-index: 100;
     }
   </style>
 </head>
 <body>
   <header>
+    <div class="logo">Allen Zagorodnyuk</div>
     <nav>
       <a href="index.html">About Me</a>
       <a href="project.html">Projects & Research</a>
       <a href="experience.html">Professional Experience</a>
-      <a href="https://www.linkedin.com/in/allen-zagorodnyuk-454505253/" target="_blank">LinkedIn</a>
       <a href="resume.pdf" target="_blank">Resume</a>
     </nav>
+    <a class="login-btn" href="https://www.linkedin.com/in/allen-zagorodnyuk-454505253/" target="_blank">LinkedIn</a>
   </header>
 
   <section id="hero">
@@ -149,9 +158,8 @@
     </div>
   </section>
 
-  <footer>
+  <footer id="footer">
     <p>&copy; Allen Zagorodnyuk | New York, NY</p>
   </footer>
 </body>
 </html>
-
